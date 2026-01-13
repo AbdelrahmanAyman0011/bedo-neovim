@@ -91,3 +91,8 @@ vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>")
 vim.keymap.set("n", "<leader>gb", ":Gitsigns blame_line<CR>")
 vim.keymap.set("n", "<leader>gd", ":Gitsigns diffthis<CR>")
 
+-- Format current buffer using LSP
+vim.keymap.set("n", "<leader>f", function()
+  vim.lsp.buf.format({ async = true })
+end, { desc = "Format file" })
+
