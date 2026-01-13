@@ -4,10 +4,9 @@ return {
   config = function()
     require("lualine").setup({
       options = {
-        theme = "dracula",
+        theme = "auto", -- Will auto-detect and use carbonfox theme
         icons_enabled = true,
       },
     })
   end,
 }
-

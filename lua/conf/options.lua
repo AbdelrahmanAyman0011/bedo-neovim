@@ -34,8 +34,8 @@ local options = {
   wrap = false,
   scrolloff = 4,
   sidescrolloff = 4,
+  guifont = "JetBrainsMono_Nerd_Font:h12", -- Changed from h11 to h9 (smaller)
   --guifont = "Cascadia_Mono:h10",
-  guifont = "JetBrainsMono_Nerd_Font:h11",
 }
 
 for k, v in pairs(options) do
