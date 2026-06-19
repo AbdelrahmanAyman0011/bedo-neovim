@@ -34,7 +34,7 @@ local options = {
   wrap = false,
   scrolloff = 4,
   sidescrolloff = 4,
-  guifont = "Terminus (TTF):h12",
+  guifont = "Terminus (TTF):h14",
   --guifont = "Cascadia_Mono:h10",
 }
 
