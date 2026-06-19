@@ -134,4 +134,4 @@ The following options are set:
 -   `wrap = false`
 -   `scrolloff = 4`
 -   `sidescrolloff = 4`
--   `guifont = "JetBrains Mono:h11"`
+-   `guifont = "Terminus (TTF):h12"`
