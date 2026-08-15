@@ -85,6 +85,7 @@ return {
         "docker_compose_language_service", -- Docker Compose
         "sqlls",               -- SQL
         "bashls",              -- Bash
+        "rust_analyzer",       -- Rust
       },
       automatic_installation = true,
       handlers = {
@@ -114,6 +115,11 @@ return {
               },
             },
           })
+        end,
+        
+        -- Custom handler for rust_analyzer
+        ["rust_analyzer"] = function()
+          -- Let rustaceanvim handle the setup
         end,
       },
     })

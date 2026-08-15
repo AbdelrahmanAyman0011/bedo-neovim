@@ -1,5 +1,41 @@
 return {
   "nvim-treesitter/nvim-treesitter",
-  enabled = false,
-}
+  branch = "master",
+  build = ":TSUpdate",
 
+  config = function()
+    require("nvim-treesitter.configs").setup({
+        ensure_installed = {
+          "c",
+          "cpp",
+          "python",
+          "html",
+          "css",
+          "matlab",
+          "javascript",
+          "lua",
+          "vim",
+          "vimdoc",
+          "query",
+          "rust"
+        },
+
+        sync_install = false,
+        auto_install = true,
+
+        autopairs = {
+          enable = true,
+        },
+        
+        highlight = {
+          enable = true,
+          additional_vim_regex_highlighting = false,
+        },
+
+        indent = {
+          enable = true,
+          --disable = { "python", "c" } -- these and some other langs don't work well
+        },
+      })
+  end
+}

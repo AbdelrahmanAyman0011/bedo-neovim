@@ -14,7 +14,7 @@ return {
 
       require("mason-nvim-dap").setup({
         -- Automatically install debuggers for these languages
-        ensure_installed = { "python", "cpptools", "delve" },
+        ensure_installed = { "python", "cpptools", "delve", "codelldb" },
         automatic_installation = true,
       })
 
