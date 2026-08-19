@@ -5,9 +5,9 @@ return {
   priority = 1000,
   config = function()
     require("catppuccin").setup({
-      flavour = "macchiato",
-      transparent_background = false, -- Set to false for light theme
+      flavour = "mocha", -- Deep, rich dark theme
+      transparent_background = false,
     })
-   -- vim.cmd([[colorscheme catppuccin-macchiato]])
+    vim.cmd([[colorscheme catppuccin-mocha]])
   end,
 }

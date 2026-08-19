@@ -62,6 +62,6 @@ vim.opt.shortmess:append "c"
 
 vim.opt.clipboard = "unnamedplus"
 
-vim.cmd([[colorscheme wildcharm]])
+-- colorscheme is now set in plugin config
 
 
