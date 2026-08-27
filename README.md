@@ -61,6 +61,20 @@ This configuration uses the following plugins:
 | `<F2>` | Rename |
 | `<F4>` | Code action |
 
+### Copilot
+
+Copilot suggestions appear as gray text while typing in insert mode.
+
+| Key | Action |
+| --- | --- |
+| `<C-l>` | Accept the suggested line |
+| `<M-l>` | Accept the suggested line |
+| `<M-w>` | Accept the next suggested word |
+| `<C-]>` | Dismiss the suggestion |
+| `<M-]>` | Show the next suggestion |
+| `<M-[>` | Show the previous suggestion |
+| `<Tab>` | Navigate nvim-cmp completions or insert indentation; it does not accept Copilot suggestions |
+
 ### Telescope
 
 | Key | Action |

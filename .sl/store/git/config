@@ -1,0 +1,17 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = true
+
+#### Begin maintained by Sapling ####
+
+[maintenance "gc"]
+  enabled = false
+[maintenance "loose-objects"]
+  enabled = true
+[maintenance "incremental-repack"]
+  enabled = false
+[repack]
+  writeBitmaps = false
+
+#### End maintained by Sapling ####

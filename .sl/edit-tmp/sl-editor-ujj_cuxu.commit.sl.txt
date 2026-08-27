@@ -1,0 +1,30 @@
+update lua defult theme
+
+SL: Enter commit message.  Lines beginning with 'SL:' are removed.
+SL: Leave message empty to abort commit.
+SL: --
+SL: user: Bedo <abdelrahmanayman0011@gmail.com>
+SL: added   lua/conf/.keymap.lua.swp          |  Bin 
+SL: added   lua/conf/init.lua                 |    4 ++
+SL: added   lua/conf/keymap.lua               |  104 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+SL: added   lua/conf/lazy_init.lua            |   29 ++++++++++++++++++++
+SL: added   lua/conf/options.lua              |   67 +++++++++++++++++++++++++++++++++++++++++++++++
+SL: added   lua/conf/plugins/autopair.lua     |    6 ++++
+SL: added   lua/conf/plugins/catppuccin.lua   |   13 +++++++++
+SL: added   lua/conf/plugins/colorbuddy.lua   |    5 +++
+SL: added   lua/conf/plugins/colorizer.lua    |    6 ++++
+SL: added   lua/conf/plugins/copilot.lua      |    3 ++
+SL: added   lua/conf/plugins/dap.lua          |   48 ++++++++++++++++++++++++++++++++++
+SL: added   lua/conf/plugins/endhints.lua     |    8 +++++
+SL: added   lua/conf/plugins/gitsigns.lua     |   43 ++++++++++++++++++++++++++++++
+SL: added   lua/conf/plugins/gruvbox.lua      |   11 +++++++
+SL: added   lua/conf/plugins/lsp.lua          |  208 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+SL: added   lua/conf/plugins/lualine.lua      |   12 ++++++++
+SL: added   lua/conf/plugins/nightfox.lua     |   13 +++++++++
+SL: added   lua/conf/plugins/rustaceanvim.lua |   30 +++++++++++++++++++++
+SL: added   lua/conf/plugins/telescope.lua    |   19 +++++++++++++
+SL: added   lua/conf/plugins/toggleterm.lua   |   14 +++++++++
+SL: added   lua/conf/plugins/tokyonight.lua   |    8 +++++
+SL: added   lua/conf/plugins/tree.lua         |   13 +++++++++
+SL: added   lua/conf/plugins/treesitter.lua   |   41 +++++++++++++++++++++++++++++
+SL:  23 files changed, 705 insertions(+), 0 deletions(-)
