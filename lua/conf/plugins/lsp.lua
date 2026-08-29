@@ -46,7 +46,21 @@ return {
     end
 
     vim.diagnostic.config({
-      virtual_text = false,
+      virtual_text = {
+        spacing = 4,
+        prefix = "●",
+        format = function(diagnostic)
+          if diagnostic.severity == vim.diagnostic.severity.ERROR then
+            return "Error"
+          elseif diagnostic.severity == vim.diagnostic.severity.WARN then
+            return "Warn"
+          elseif diagnostic.severity == vim.diagnostic.severity.INFO then
+            return "Info"
+          else
+            return "Hint"
+          end
+        end,
+      },
       signs = {
         active = signs,
       },

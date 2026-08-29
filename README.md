@@ -44,7 +44,10 @@ This configuration uses the following plugins:
 | `<S-h>` | Previous buffer |
 | `<leader>e` | Toggle NvimTree |
 | `<C-p>` | Find files with Telescope |
-| `<C-t>` | Toggle terminal |
+| `<C-t>` | Slide the terminal panel up/down |
+| `<C-Up>` | Make the terminal panel taller |
+| `<C-Down>` | Make the terminal panel shorter |
+| `<leader>tf` | Toggle terminal fullscreen |
 
 ### LSP
 
