@@ -160,7 +160,8 @@ return {
 
     cmp.setup({
       sources = {
-        {name = "nvim_lsp"},
+        {name = "copilot", group_index = 2},
+        {name = "nvim_lsp", group_index = 2},
       },
 
       mapping = cmp.mapping.preset.insert({
@@ -190,8 +191,9 @@ return {
       formatting = {
         fields = { "kind", "abbr", "menu" },
         format = function(entry, vim_item)
-          vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
+          vim_item.kind = string.format("%s", kind_icons[vim_item.kind] or vim_item.kind)
           vim_item.menu = ({
+            copilot = "[Copilot]",
             nvim_lsp = "[LSP]",
             buffer = "[Buffer]",
             path = "[Path]",
