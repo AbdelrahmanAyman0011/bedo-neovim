@@ -91,54 +91,39 @@ return {
     -- Get capabilities for autocomplete
     local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-    -- Mason-lspconfig setup with automatic installation
+    local servers_to_install = {
+      "lua_ls", "clangd", "pyright", "gopls", "jdtls", 
+      "dockerls", "docker_compose_language_service", "sqlls", "bashls"
+    }
+
+    -- Mason-lspconfig setup
     require("mason-lspconfig").setup({
-      ensure_installed = {
-        "lua_ls",              -- Lua
-        "clangd",              -- C/C++
-        "pyright",             -- Python
-        "gopls",               -- Go
-        "jdtls",               -- Java
-        "dockerls",            -- Dockerfile
-        "docker_compose_language_service", -- Docker Compose
-        "sqlls",               -- SQL
-        "bashls",              -- Bash
-        "rust_analyzer",       -- Rust
+      ensure_installed = servers_to_install,
+      automatic_enable = {
+        exclude = { "rust_analyzer" }, -- Let rustaceanvim handle Rust
       },
-      automatic_installation = true,
-      handlers = {
-        -- Default handler - applies to all servers
-        function(server_name)
-          require("lspconfig")[server_name].setup({
-            capabilities = capabilities,
-          })
-        end,
-        
-        -- Custom handler for lua_ls
-        ["lua_ls"] = function()
-          require("lspconfig").lua_ls.setup({
-            capabilities = capabilities,
-            settings = {
-              Lua = {
-                diagnostics = {
-                  globals = { "vim" },
-                },
-                workspace = {
-                  library = vim.api.nvim_get_runtime_file("", true),
-                  checkThirdParty = false,
-                },
-                telemetry = {
-                  enable = false,
-                },
-              },
-            },
-          })
-        end,
-        
-        -- Custom handler for rust_analyzer
-        ["rust_analyzer"] = function()
-          -- Let rustaceanvim handle the setup
-        end,
+    })
+
+    -- Apply capabilities to all servers
+    for _, server in ipairs(servers_to_install) do
+      vim.lsp.config(server, { capabilities = capabilities })
+    end
+
+    -- Configure lua_ls using the new native API
+    vim.lsp.config("lua_ls", {
+      settings = {
+        Lua = {
+          diagnostics = {
+            globals = { "vim" },
+          },
+          workspace = {
+            library = vim.api.nvim_get_runtime_file("", true),
+            checkThirdParty = false,
+          },
+          telemetry = {
+            enable = false,
+          },
+        },
       },
     })
 
