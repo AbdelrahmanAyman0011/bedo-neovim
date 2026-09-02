@@ -160,7 +160,6 @@ return {
 
     cmp.setup({
       sources = {
-        {name = "copilot", group_index = 2},
         {name = "nvim_lsp", group_index = 2},
       },
 
@@ -193,7 +192,6 @@ return {
         format = function(entry, vim_item)
           vim_item.kind = string.format("%s", kind_icons[vim_item.kind] or vim_item.kind)
           vim_item.menu = ({
-            copilot = "[Copilot]",
             nvim_lsp = "[LSP]",
             buffer = "[Buffer]",
             path = "[Path]",
